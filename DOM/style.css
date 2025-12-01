@@ -1,0 +1,21 @@
+#demo{
+    display: flex;
+    justify-content: space-evenly;
+     transition: all;
+    transition-duration: 500ms;
+   
+    width: 100%;
+}
+#btn-group{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.box{
+    transition: all;
+    transition-duration: 500ms;
+    background-color: teal;
+    height: 100px;
+    width: 100px;
+}
