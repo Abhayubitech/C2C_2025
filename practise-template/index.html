@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-graduation-cap me-2"></i>StudentTask</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-light text-primary ms-2 px-3" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section d-flex align-items-center text-center text-white" style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.8), rgba(102, 16, 242, 0.8)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-attachment: fixed; height: 100vh;">
+        <div class="container" data-aos="zoom-in" data-aos-duration="1200">
+            <h1 class="display-2 fw-bold mb-3 hero-title">Master Your <span class="text-warning">Future</span></h1>
+            <p class="lead mb-5 hero-subtitle">The ultimate platform for students to organize, track, and succeed.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="signup.html" class="btn btn-light btn-lg text-primary fw-bold shadow-lg glow-btn"><i class="fas fa-rocket me-2"></i>Get Started Now</a>
+                <a href="#features" class="btn btn-outline-light btn-lg fw-bold"><i class="fas fa-play-circle me-2"></i>Watch Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Why Choose Us?</h2>
+                <p class="text-muted">We provide the best tools for students.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-tasks fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">Task Management</h4>
+                            <p class="card-text">Easily manage your daily tasks and assignments in one place.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line fa-3x text-success mb-3"></i>
+                            <h4 class="card-title">Track Progress</h4>
+                            <p class="card-text">Visualize your progress and stay motivated to finish your work.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-users fa-3x text-info mb-3"></i>
+                            <h4 class="card-title">Community</h4>
+                            <p class="card-text">Join a community of students and share your journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 Student Task. All rights reserved.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="anti-cheat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
