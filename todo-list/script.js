@@ -19,7 +19,8 @@ function loadData() {
     li.addEventListener("click", () => {
       removeItem(li.dataset.id);
     });
-    li.innerText = item;
+    li.innerHTML=` <div class="bg-dark text-white rounded-2 shadow-sm p-3 mt-2">${item}</div>`
+   
     list.appendChild(li);
   });
 }
