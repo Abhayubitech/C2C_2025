@@ -10,30 +10,59 @@
 height: 500px;
 width: 500px;
 border: 1px solid black;
-
+margin: auto;
 position: relative;
 }
 #target{
 height: 50px;
 width: 50px;
-
 background-color: tomato;
+border-radius: 100%;
 position: absolute;
-
+transition-property: all;
+transition-duration: 500ms;
 }
+#btn-grp{
+ 
+  width: 500px;
+  justify-content: space-evenly;
+  margin: 10px auto auto auto;
+}
+
     </style>
 </head>
 <body>
     <div id="box">
         <div id="target"></div>
     </div>
-    <button onclick="moveUp()">top</button>
-    <button onclick="moveDown()">bottom</button>
-    <button onclick="moveLeft()">left</button>
-    <button onclick="moveRight()">right</button>
+    <div id="btn-grp">
+ <button onclick="moveUp()">Up</button>
+    <button onclick="moveDown()">Down</button>
+    <button onclick="moveLeft()">Left</button>
+    <button onclick="moveRight()">Right</button>
+    </div>
+   
 </body>
 <script>
-  let speed = 20
+ window.addEventListener('keypress', (e) => {
+  console.log(e.keyCode);
+  switch(e.keyCode){
+    case 119 : 
+       moveUp()
+       break;
+    case 97 : 
+       moveLeft()
+       break;
+    case 115 : 
+       moveDown()
+       break;
+    case 100 : 
+       moveRight()
+       break;
+  }
+});
+
+  let speed = 100
  function  moveUp(){
    let target = document.getElementById('target')
    let bottom = window.getComputedStyle(target).bottom
@@ -42,7 +71,7 @@ position: absolute;
     top = +top.slice(0,top.length-2)
    if(top>0){
     console.log((top + 10) + 'px')
-    target.style.top = (top - speed) + 'px';
+    target.style.top = (top - (!(speed>=top)?speed:top)) + 'px';
    }
  }
  function  moveDown(){
@@ -53,7 +82,7 @@ position: absolute;
     top = +top.slice(0,top.length-2)
    if(bottom>0){
     console.log((top + 10) + 'px')
-    target.style.top = (top + speed) + 'px';
+    target.style.top = (top + (!(speed>=bottom)?speed:bottom)) + 'px';
    }
  }
  function  moveRight(){
@@ -76,7 +105,7 @@ position: absolute;
     left = +left.slice(0,left.length-2)
     console.log((left + 10) + 'px')
    if(left>0){
-    target.style.left = (left - speed) + 'px';
+    target.style.left = (left - (!(speed>=left)?speed:left)) + 'px';
    }
  }
 </script>
