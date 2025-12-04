@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <style>
+        #box{
+height: 500px;
+width: 500px;
+border: 1px solid black;
+
+position: relative;
+}
+#target{
+height: 50px;
+width: 50px;
+
+background-color: tomato;
+position: absolute;
+
+}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="target"></div>
+    </div>
+    <button onclick="moveUp()">top</button>
+    <button onclick="moveDown()">bottom</button>
+    <button onclick="moveLeft()">left</button>
+    <button onclick="moveRight()">right</button>
+</body>
+<script>
+  let speed = 20
+ function  moveUp(){
+   let target = document.getElementById('target')
+   let bottom = window.getComputedStyle(target).bottom
+   bottom = +bottom.slice(0,bottom.length-2)
+   let top = window.getComputedStyle(target).top
+    top = +top.slice(0,top.length-2)
+   if(top>0){
+    console.log((top + 10) + 'px')
+    target.style.top = (top - speed) + 'px';
+   }
+ }
+ function  moveDown(){
+   let target = document.getElementById('target')
+   let bottom = window.getComputedStyle(target).bottom
+   bottom = +bottom.slice(0,bottom.length-2)
+   let top = window.getComputedStyle(target).top
+    top = +top.slice(0,top.length-2)
+   if(bottom>0){
+    console.log((top + 10) + 'px')
+    target.style.top = (top + speed) + 'px';
+   }
+ }
+ function  moveRight(){
+   let target = document.getElementById('target')
+   let right = window.getComputedStyle(target).right
+   right = +right.slice(0,right.length-2)
+   let left = window.getComputedStyle(target).left
+   console.log(left,right)
+    left = +left.slice(0,left.length-2)
+    console.log((left + 10) + 'px')
+   if(right>0){
+    target.style.left = (left + (!(speed>=right)?speed:right)) + 'px';
+   }
+ }
+ function  moveLeft(){
+   let target = document.getElementById('target')
+   let right = window.getComputedStyle(target).right
+   right = +right.slice(0,right.length-2)
+   let left = window.getComputedStyle(target).left
+    left = +left.slice(0,left.length-2)
+    console.log((left + 10) + 'px')
+   if(left>0){
+    target.style.left = (left - speed) + 'px';
+   }
+ }
+</script>
+</html>
