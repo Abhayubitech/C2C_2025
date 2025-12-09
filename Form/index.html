@@ -135,10 +135,10 @@
         if (div) {
           div.innerText = JSON.stringify(values);
         }
-        input.addEventListener("input", () => {
+        input.addEventListener("input", (e) => {
           const regex = /^[a-zA-Z0-9]+$/; // Ensure input is strictly alphanumeric, no spaces, etc.
-
-          if (regex.test(input.value)) {
+        // alert(e.target.value)
+          if (regex.test(String(e.target.value))) {
             // If input matches alphanumeric pattern, mark as valid
             input.classList.remove("is-invalid");
             input.classList.add("is-valid");
